@@ -1,10 +1,12 @@
 ---
 title: 灵动键 FlexKey 文档
 description: Android 自动化与快捷触发工具使用文档
+lang: zh
 nav_title: 概览
 nav_order: 1
 next_title: 使用指南
 next_url: /user-guide.html
+lang_switch_url: /en/
 ---
 
 # 灵动键 FlexKey 文档

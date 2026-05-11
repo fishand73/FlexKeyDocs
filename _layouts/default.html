@@ -1,5 +1,31 @@
+{% assign current_lang = page.lang | default: 'zh' %}
+{% if current_lang == 'en' %}
+  {% assign html_lang = 'en' %}
+  {% assign tagline = 'One key for the things you want to do' %}
+  {% assign search_label = 'Search' %}
+  {% assign search_placeholder = 'Search docs' %}
+  {% assign nav_label = 'Documentation' %}
+  {% assign toc_label = 'On This Page' %}
+  {% assign open_sidebar = 'Open navigation' %}
+  {% assign close_sidebar = 'Close navigation' %}
+  {% assign previous_label = 'Previous' %}
+  {% assign next_label = 'Next' %}
+  {% assign switch_label = '中文' %}
+{% else %}
+  {% assign html_lang = site.lang | default: 'zh-CN' %}
+  {% assign tagline = '一个按键帮你完成你想做的事情' %}
+  {% assign search_label = '搜索' %}
+  {% assign search_placeholder = '搜索文档' %}
+  {% assign nav_label = '文档目录' %}
+  {% assign toc_label = '本页目录' %}
+  {% assign open_sidebar = '打开目录' %}
+  {% assign close_sidebar = '关闭目录' %}
+  {% assign previous_label = 'Previous' %}
+  {% assign next_label = 'Next' %}
+  {% assign switch_label = 'English' %}
+{% endif %}
 <!doctype html>
-<html lang="{{ site.lang | default: 'zh-CN' }}">
+<html lang="{{ html_lang }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +39,7 @@
   <body class="page-{{ page.name | replace: '.md', '' | replace: 'index', 'home' }}">
     {% assign docs_pages = site.pages | where_exp: "item", "item.nav_order" | sort: "nav_order" %}
     <div class="mobile-bar">
-      <button class="icon-button" id="sidebar-toggle" aria-label="打开目录" aria-expanded="false">
+      <button class="icon-button" id="sidebar-toggle" aria-label="{{ open_sidebar }}" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -30,32 +56,38 @@
           <img class="brand-icon" src="{{ '/assets/img/flexkey-icon.png' | relative_url }}" alt="FlexKey App 图标" width="44" height="44">
           <span>
             <strong>FlexKey</strong>
-            <small>一个按键帮你完成你想做的事情</small>
+            <small>{{ tagline }}</small>
           </span>
         </a>
 
+        {% if page.lang_switch_url %}
+          <a class="language-switch" href="{{ page.lang_switch_url | relative_url }}">{{ switch_label }}</a>
+        {% endif %}
+
         <label class="search">
-          <span>搜索</span>
-          <input id="doc-search" type="search" placeholder="搜索文档" autocomplete="off">
+          <span>{{ search_label }}</span>
+          <input id="doc-search" type="search" placeholder="{{ search_placeholder }}" autocomplete="off">
         </label>
 
-        <nav class="sidebar-nav" aria-label="文档目录">
+        <nav class="sidebar-nav" aria-label="{{ nav_label }}">
           {% for item in docs_pages %}
-            {% assign item_title = item.nav_title | default: item.title %}
-            <a class="sidebar-link{% if item.url == page.url %} is-active{% endif %}"
-               href="{{ item.url | relative_url }}"
-               data-title="{{ item_title | downcase | escape }}"
-               data-description="{{ item.description | downcase | escape }}">
-              <span>{{ item_title }}</span>
-              {% if item.description %}
-                <small>{{ item.description }}</small>
-              {% endif %}
-            </a>
+            {% if item.lang == current_lang %}
+              {% assign item_title = item.nav_title | default: item.title %}
+              <a class="sidebar-link{% if item.url == page.url %} is-active{% endif %}"
+                 href="{{ item.url | relative_url }}"
+                 data-title="{{ item_title | downcase | escape }}"
+                 data-description="{{ item.description | downcase | escape }}">
+                <span>{{ item_title }}</span>
+                {% if item.description %}
+                  <small>{{ item.description }}</small>
+                {% endif %}
+              </a>
+            {% endif %}
           {% endfor %}
         </nav>
       </aside>
 
-      <button class="scrim" id="sidebar-scrim" aria-label="关闭目录"></button>
+      <button class="scrim" id="sidebar-scrim" aria-label="{{ close_sidebar }}"></button>
 
       <main class="content-wrap">
         <article class="doc-content" id="doc-content">
@@ -66,7 +98,7 @@
           <nav class="page-nav" aria-label="上下页">
             {% if page.prev_title %}
               <a class="page-nav-card" href="{{ page.prev_url | relative_url }}">
-                <span>Previous</span>
+                <span>{{ previous_label }}</span>
                 <strong>{{ page.prev_title }}</strong>
               </a>
             {% else %}
@@ -74,7 +106,7 @@
             {% endif %}
             {% if page.next_title %}
               <a class="page-nav-card next" href="{{ page.next_url | relative_url }}">
-                <span>Next</span>
+                <span>{{ next_label }}</span>
                 <strong>{{ page.next_title }}</strong>
               </a>
             {% endif %}
@@ -82,8 +114,8 @@
         {% endif %}
       </main>
 
-      <aside class="toc" aria-label="本页目录">
-        <p>本页目录</p>
+      <aside class="toc" aria-label="{{ toc_label }}">
+        <p>{{ toc_label }}</p>
         <nav id="page-toc"></nav>
       </aside>
     </div>

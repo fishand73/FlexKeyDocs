@@ -1,10 +1,12 @@
 ---
 title: JS 脚本与条件 API
 description: JS 动作、JS 条件、事件对象结构、可用 API 和示例。
+lang: zh
 nav_title: JS 脚本与条件 API
 nav_order: 4
 prev_title: 动作与内置功能
 prev_url: /actions.html
+lang_switch_url: /en/js-api.html
 ---
 
 # JS 脚本与条件 API

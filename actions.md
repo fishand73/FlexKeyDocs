@@ -1,12 +1,14 @@
 ---
 title: 动作与内置功能
 description: 内置动作库、自定义动作格式、动作 body 语法、远程动作 JSON。
+lang: zh
 nav_title: 动作与内置功能
 nav_order: 3
 prev_title: 使用指南
 prev_url: /user-guide.html
 next_title: JS 脚本与条件 API
 next_url: /js-api.html
+lang_switch_url: /en/actions.html
 ---
 
 # 动作与内置功能

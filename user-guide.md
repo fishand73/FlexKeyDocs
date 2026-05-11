@@ -1,12 +1,14 @@
 ---
 title: 使用指南
 description: 服务权限、规则创建、条件类型、生效范围和常见配置流程。
+lang: zh
 nav_title: 使用指南
 nav_order: 2
 prev_title: 概览
 prev_url: /
 next_title: 动作与内置功能
 next_url: /actions.html
+lang_switch_url: /en/user-guide.html
 ---
 
 # 使用指南
