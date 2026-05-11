@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'zh-CN' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/gitbook.css' | relative_url }}">
+  </head>
+  <body>
+    {% assign docs_pages = site.pages | where_exp: "item", "item.nav_order" | sort: "nav_order" %}
+    <div class="mobile-bar">
+      <button class="icon-button" id="sidebar-toggle" aria-label="打开目录" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a class="mobile-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    </div>
+
+    <div class="page-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="{{ '/' | relative_url }}">
+          <span class="brand-mark">F</span>
+          <span>
+            <strong>FlexKey</strong>
+            <small>一个按键帮你完成你想做的事情</small>
+          </span>
+        </a>
+
+        <label class="search">
+          <span>搜索</span>
+          <input id="doc-search" type="search" placeholder="搜索文档" autocomplete="off">
+        </label>
+
+        <nav class="sidebar-nav" aria-label="文档目录">
+          {% for item in docs_pages %}
+            {% assign item_title = item.nav_title | default: item.title %}
+            <a class="sidebar-link{% if item.url == page.url %} is-active{% endif %}"
+               href="{{ item.url | relative_url }}"
+               data-title="{{ item_title | downcase | escape }}"
+               data-description="{{ item.description | downcase | escape }}">
+              <span>{{ item_title }}</span>
+              {% if item.description %}
+                <small>{{ item.description }}</small>
+              {% endif %}
+            </a>
+          {% endfor %}
+        </nav>
+      </aside>
+
+      <button class="scrim" id="sidebar-scrim" aria-label="关闭目录"></button>
+
+      <main class="content-wrap">
+        <article class="doc-content" id="doc-content">
+          {{ content }}
+        </article>
+
+        {% if page.prev_title or page.next_title %}
+          <nav class="page-nav" aria-label="上下页">
+            {% if page.prev_title %}
+              <a class="page-nav-card" href="{{ page.prev_url | relative_url }}">
+                <span>Previous</span>
+                <strong>{{ page.prev_title }}</strong>
+              </a>
+            {% else %}
+              <span></span>
+            {% endif %}
+            {% if page.next_title %}
+              <a class="page-nav-card next" href="{{ page.next_url | relative_url }}">
+                <span>Next</span>
+                <strong>{{ page.next_title }}</strong>
+              </a>
+            {% endif %}
+          </nav>
+        {% endif %}
+      </main>
+
+      <aside class="toc" aria-label="本页目录">
+        <p>本页目录</p>
+        <nav id="page-toc"></nav>
+      </aside>
+    </div>
+
+    <script src="{{ '/assets/js/docs.js' | relative_url }}"></script>
+  </body>
+</html>

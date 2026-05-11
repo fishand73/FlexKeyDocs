@@ -1,3 +1,12 @@
+---
+title: JS 脚本与条件 API
+description: JS 动作、JS 条件、事件对象结构、可用 API 和示例。
+nav_title: JS 脚本与条件 API
+nav_order: 4
+prev_title: 动作与内置功能
+prev_url: /actions.html
+---
+
 # JS 脚本与条件 API
 
 灵动键内置 QuickJS 运行时。JS 可以用于两类场景：

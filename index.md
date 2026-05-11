@@ -1,3 +1,12 @@
+---
+title: 灵动键 FlexKey 文档
+description: Android 自动化与快捷触发工具使用文档
+nav_title: 概览
+nav_order: 1
+next_title: 使用指南
+next_url: /user-guide.html
+---
+
 # 灵动键 FlexKey 文档
 
 灵动键是一款面向 Android 的自动化与快捷触发工具。它把“条件”和“动作”组合成规则：当按键、悬浮球、手势、通知或无障碍事件满足条件时，自动执行一个动作。
@@ -6,9 +15,9 @@
 
 ## 文档目录
 
-- [使用指南](user-guide.md)：服务权限、规则创建、条件类型、生效范围和常见配置流程。
-- [动作与内置功能](actions.md)：内置动作库、自定义动作格式、动作 body 语法、远程动作 JSON。
-- [JS 脚本与条件 API](js-api.md)：JS 动作、JS 条件、事件对象结构、可用 API 和示例。
+- [使用指南](/user-guide.html)：服务权限、规则创建、条件类型、生效范围和常见配置流程。
+- [动作与内置功能](/actions.html)：内置动作库、自定义动作格式、动作 body 语法、远程动作 JSON。
+- [JS 脚本与条件 API](/js-api.html)：JS 动作、JS 条件、事件对象结构、可用 API 和示例。
 
 ## 核心概念
 

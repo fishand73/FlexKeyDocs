@@ -1,3 +1,14 @@
+---
+title: 动作与内置功能
+description: 内置动作库、自定义动作格式、动作 body 语法、远程动作 JSON。
+nav_title: 动作与内置功能
+nav_order: 3
+prev_title: 使用指南
+prev_url: /user-guide.html
+next_title: JS 脚本与条件 API
+next_url: /js-api.html
+---
+
 # 动作与内置功能
 
 ## 动作是什么
@@ -136,7 +147,7 @@ keyevent:85
 js:<JavaScript code>
 ```
 
-详见 [JS 脚本与条件 API](js-api.md)。
+详见 [JS 脚本与条件 API](/js-api.html)。
 
 ## 动作 body 语法
 

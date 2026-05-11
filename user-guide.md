@@ -1,3 +1,14 @@
+---
+title: 使用指南
+description: 服务权限、规则创建、条件类型、生效范围和常见配置流程。
+nav_title: 使用指南
+nav_order: 2
+prev_title: 概览
+prev_url: /
+next_title: 动作与内置功能
+next_url: /actions.html
+---
+
 # 使用指南
 
 ## App 是什么
@@ -143,7 +154,7 @@ return event.packageName === 'com.example.chat'
     && event.text.indexOf('验证码') >= 0;
 ```
 
-详见 [JS 脚本与条件 API](js-api.md)。
+详见 [JS 脚本与条件 API](/js-api.html)。
 
 ## 动作反馈
 
