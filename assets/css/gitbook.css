@@ -76,15 +76,11 @@ a:hover {
   text-decoration: none;
 }
 
-.brand-mark {
-  display: grid;
-  place-items: center;
+.brand-icon {
+  display: block;
   width: 44px;
   height: 44px;
-  border-radius: 10px;
-  background: var(--accent);
-  color: #fff;
-  font-weight: 800;
+  border-radius: 11px;
   box-shadow: 0 8px 20px rgba(180, 123, 74, 0.28);
 }
 
@@ -297,6 +293,47 @@ a:hover {
   background: #fcfbfa;
 }
 
+.doc-content td code {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.doc-content .action-table {
+  display: table;
+  table-layout: fixed;
+}
+
+.doc-content .action-table th:first-child,
+.doc-content .action-table td:first-child {
+  width: 24%;
+}
+
+.doc-content .action-table-body th:nth-child(2),
+.doc-content .action-table-body td:nth-child(2) {
+  width: 76%;
+}
+
+.doc-content .action-table-desc-body th:nth-child(2),
+.doc-content .action-table-desc-body td:nth-child(2) {
+  width: 27%;
+}
+
+.doc-content .action-table-desc-body th:nth-child(3),
+.doc-content .action-table-desc-body td:nth-child(3) {
+  width: 49%;
+}
+
+.doc-content .action-table-body-dep th:nth-child(2),
+.doc-content .action-table-body-dep td:nth-child(2) {
+  width: 50%;
+}
+
+.doc-content .action-table-body-dep th:nth-child(3),
+.doc-content .action-table-body-dep td:nth-child(3) {
+  width: 26%;
+}
+
 .toc {
   position: sticky;
   top: 0;
@@ -442,8 +479,15 @@ a:hover {
   }
 
   .mobile-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
     color: var(--text);
     font-weight: 700;
+  }
+
+  .mobile-title img {
+    border-radius: 7px;
   }
 
   .page-shell {
@@ -489,6 +533,10 @@ a:hover {
 
   .doc-content h2 {
     font-size: 23px;
+  }
+
+  .doc-content .action-table {
+    display: block;
   }
 
   .page-nav {

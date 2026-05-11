@@ -39,6 +39,7 @@ prefix:args
 | 截取当前屏幕 | 截图并保存 | `app:screenshot()` |
 | 隐藏/显示悬浮球 | 切换悬浮球显示 | `intent:service://#Intent;action=floating.toggle;component=xyz.imxqd.clickclick/.service.FloatingBallService;end` |
 | 开始手势识别 | 打开手势识别界面 | `intent:activity://#Intent;action=android.intent.action.MAIN;component=xyz.imxqd.clickclick/.ui.GestureDetectActivity;end` |
+{: .action-table .action-table-desc-body }
 
 ### 全局控制
 
@@ -58,6 +59,7 @@ prefix:args
 | 粘贴当前文本 | `action:32768` | 无障碍服务 |
 | 上一个标签 | `action:2048` | 无障碍服务 |
 | 下一个标签 | `action:1024` | 无障碍服务 |
+{: .action-table .action-table-body-dep }
 
 ### 系统设置
 
@@ -72,6 +74,7 @@ prefix:args
 | 旋转至 270 度 | `settings:rotation(270)` | 修改系统设置 |
 | 旋转 90 度 | `settings:rotate(90)` | 修改系统设置 |
 | 旋转 180 度 | `settings:rotate(180)` | 修改系统设置 |
+{: .action-table .action-table-body-dep }
 
 ### 应用动作
 
@@ -82,6 +85,7 @@ prefix:args
 | Mi Pay | 打开 Mi Pay 快捷界面 | `intent:activity://#Intent;action=com.miui.intent.action.DOUBLE_CLICK;...;end` |
 | 发新微博 | 打开微博发布页 | `url:sinaweibo://compose` |
 | 拨打 110 | 打开拨号 | `url:tel:110` |
+{: .action-table .action-table-desc-body }
 
 这些动作通常依赖目标应用是否安装。
 
@@ -100,6 +104,7 @@ prefix:args
 | 网易云喜爱(新) | `notification:com.netease.cloudmusic:@id/playNotificationStar` |
 | 网易云音乐喜爱（内置） | `app:cloud_music_like()` |
 | QQ 音乐喜爱 | `intent:broadcast://#Intent;action=com.tencent.qqmusic.ACTION_SERVICE_FAVORATE_SONG.QQMusicPhone;end` |
+{: .action-table .action-table-body }
 
 ### 趣味动作
 
@@ -109,6 +114,7 @@ prefix:args
 | 音调 | `ui:tone(256:100,288:100,320:100,341:100,384:100,426:100,480:100)` |
 | 小星星示例 | `ui:tone(...)` |
 | 小星星完整版 | `ui:tone(...)` |
+{: .action-table .action-table-body }
 
 ## 自定义动作类型
 
