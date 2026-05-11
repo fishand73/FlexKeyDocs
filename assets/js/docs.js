@@ -57,6 +57,13 @@
     }
   }
 
+  document.querySelectorAll('.doc-content table').forEach(function (table) {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'table-scroll';
+    table.parentNode.insertBefore(wrapper, table);
+    wrapper.appendChild(table);
+  });
+
   document.querySelectorAll('pre').forEach(function (pre) {
     const code = pre.querySelector('code');
     if (!code) {

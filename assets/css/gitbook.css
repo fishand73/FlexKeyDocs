@@ -117,6 +117,32 @@ a:hover {
   text-decoration: none;
 }
 
+.content-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 760px;
+  margin: -18px 0 18px;
+}
+
+.language-switch-primary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.language-switch-primary:hover {
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+}
+
 .search {
   display: block;
   margin: 8px 6px 18px;
@@ -286,11 +312,15 @@ a:hover {
   font-size: 12px;
 }
 
-.doc-content table {
-  display: block;
+.table-scroll {
   width: 100%;
   margin: 18px 0;
   overflow-x: auto;
+}
+
+.doc-content table {
+  width: 100%;
+  margin: 0;
   border-collapse: collapse;
   color: var(--text-soft);
 }
@@ -319,33 +349,47 @@ a:hover {
 }
 
 .doc-content .action-table {
-  display: table;
+  min-width: 860px;
   table-layout: fixed;
+}
+
+.doc-content .action-table-desc-body {
+  min-width: 920px;
+}
+
+.doc-content .action-table-body-dep {
+  min-width: 820px;
+}
+
+.doc-content .action-table th:not(:last-child),
+.doc-content .action-table td:not(:last-child) {
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 .doc-content .action-table th:first-child,
 .doc-content .action-table td:first-child {
-  width: 24%;
+  width: 26%;
 }
 
 .doc-content .action-table-body th:nth-child(2),
 .doc-content .action-table-body td:nth-child(2) {
-  width: 76%;
+  width: 74%;
 }
 
 .doc-content .action-table-desc-body th:nth-child(2),
 .doc-content .action-table-desc-body td:nth-child(2) {
-  width: 27%;
+  width: 24%;
 }
 
 .doc-content .action-table-desc-body th:nth-child(3),
 .doc-content .action-table-desc-body td:nth-child(3) {
-  width: 49%;
+  width: 50%;
 }
 
 .doc-content .action-table-body-dep th:nth-child(2),
 .doc-content .action-table-body-dep td:nth-child(2) {
-  width: 50%;
+  width: 48%;
 }
 
 .doc-content .action-table-body-dep th:nth-child(3),
@@ -554,8 +598,9 @@ a:hover {
     font-size: 23px;
   }
 
-  .doc-content .action-table {
-    display: block;
+  .content-toolbar {
+    justify-content: flex-start;
+    margin: -8px 0 18px;
   }
 
   .page-nav {

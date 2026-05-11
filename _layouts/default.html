@@ -96,6 +96,12 @@
       <button class="scrim" id="sidebar-scrim" aria-label="{{ close_sidebar }}"></button>
 
       <main class="content-wrap">
+        {% if page.lang_switch_url %}
+          <div class="content-toolbar">
+            <a class="language-switch-primary" href="{{ page.lang_switch_url | relative_url }}">{{ switch_label }}</a>
+          </div>
+        {% endif %}
+
         <article class="doc-content" id="doc-content">
           {{ content }}
         </article>
