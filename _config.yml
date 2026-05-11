@@ -1,0 +1,10 @@
+title: 灵动键 FlexKey 文档
+description: Android 自动化与快捷触发工具使用文档
+lang: zh-CN
+theme: jekyll-theme-primer
+markdown: kramdown
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
