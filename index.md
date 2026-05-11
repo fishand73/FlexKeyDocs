@@ -39,20 +39,3 @@
 3. 在“规则”页创建规则，只选择一种条件类型。
 4. 设置生效范围，选择动作并保存。
 5. 在规则列表中启用、停用、长按拖动排序，或通过菜单更改动作/删除规则。
-
-## 维护说明
-
-内置动作来自：
-
-- `app/src/main/res/raw-zh/*.json`
-- `app/src/main/res/raw/*.json`
-
-动作执行语法来自：
-
-- `app/src/main/java/xyz/imxqd/clickclick/func/*Function.java`
-
-JS API 与条件事件结构来自：
-
-- `app/src/main/java/xyz/imxqd/clickclick/js/JsScriptContext.java`
-- `app/src/main/java/xyz/imxqd/clickclick/editor/ClickClickApi.kt`
-- `app/src/main/java/xyz/imxqd/clickclick/ui/CreateRuleActivity.java`
