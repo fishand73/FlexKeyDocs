@@ -1,7 +1,10 @@
 {% assign current_lang = page.lang | default: 'zh' %}
 {% if current_lang == 'en' %}
   {% assign html_lang = 'en' %}
+  {% assign home_url = '/en/' %}
+  {% assign display_title = 'FlexKey Documentation' %}
   {% assign tagline = 'One key for the things you want to do' %}
+  {% assign app_icon_alt = 'FlexKey app icon' %}
   {% assign search_label = 'Search' %}
   {% assign search_placeholder = 'Search docs' %}
   {% assign nav_label = 'Documentation' %}
@@ -13,7 +16,10 @@
   {% assign switch_label = '中文' %}
 {% else %}
   {% assign html_lang = site.lang | default: 'zh-CN' %}
+  {% assign home_url = '/' %}
+  {% assign display_title = site.title %}
   {% assign tagline = '一个按键帮你完成你想做的事情' %}
+  {% assign app_icon_alt = 'FlexKey App 图标' %}
   {% assign search_label = '搜索' %}
   {% assign search_placeholder = '搜索文档' %}
   {% assign nav_label = '文档目录' %}
@@ -44,16 +50,16 @@
         <span></span>
         <span></span>
       </button>
-      <a class="mobile-title" href="{{ '/' | relative_url }}">
+      <a class="mobile-title" href="{{ home_url | relative_url }}">
         <img src="{{ '/assets/img/flexkey-icon.png' | relative_url }}" alt="" width="28" height="28">
-        <span>{{ site.title }}</span>
+        <span>{{ display_title }}</span>
       </a>
     </div>
 
     <div class="page-shell">
       <aside class="sidebar" id="sidebar">
-        <a class="brand" href="{{ '/' | relative_url }}">
-          <img class="brand-icon" src="{{ '/assets/img/flexkey-icon.png' | relative_url }}" alt="FlexKey App 图标" width="44" height="44">
+        <a class="brand" href="{{ home_url | relative_url }}">
+          <img class="brand-icon" src="{{ '/assets/img/flexkey-icon.png' | relative_url }}" alt="{{ app_icon_alt }}" width="44" height="44">
           <span>
             <strong>FlexKey</strong>
             <small>{{ tagline }}</small>
