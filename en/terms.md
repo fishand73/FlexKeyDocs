@@ -61,4 +61,4 @@ If these terms change materially, we will update this document and revise the ef
 
 ## Contact
 
-For questions about these terms, contact the maintainers through [GitHub Issues](https://github.com/hfutxqd/ClickClick/issues).
+For questions about these terms, contact the maintainers through [GitHub Issues](https://github.com/fishand73/FlexKeyDocs/issues).

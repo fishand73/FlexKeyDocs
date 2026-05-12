@@ -83,4 +83,4 @@ lang_switch_url: /en/privacy.html
 
 ## 联系方式
 
-如有隐私相关问题，请通过 [GitHub Issues](https://github.com/hfutxqd/ClickClick/issues) 联系维护者。
+如有隐私相关问题，请通过 [GitHub Issues](https://github.com/fishand73/FlexKeyDocs/issues) 联系维护者。

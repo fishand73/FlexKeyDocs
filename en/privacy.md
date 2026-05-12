@@ -83,4 +83,4 @@ If app features, data handling, or permission uses change materially, we will up
 
 ## Contact
 
-For privacy questions, contact the maintainers through [GitHub Issues](https://github.com/hfutxqd/ClickClick/issues).
+For privacy questions, contact the maintainers through [GitHub Issues](https://github.com/fishand73/FlexKeyDocs/issues).

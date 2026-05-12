@@ -61,4 +61,4 @@ Android 系统版本、厂商系统限制、目标应用更新和权限状态都
 
 ## 联系方式
 
-如有条款相关问题，请通过 [GitHub Issues](https://github.com/hfutxqd/ClickClick/issues) 联系维护者。
+如有条款相关问题，请通过 [GitHub Issues](https://github.com/fishand73/FlexKeyDocs/issues) 联系维护者。
