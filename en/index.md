@@ -21,13 +21,6 @@ These docs describe the current app behavior, built-in features, custom actions,
 - [Actions and Built-in Features](/en/actions.html): built-in action library, custom action format, action body syntax, and remote action JSON.
 - [JavaScript Scripts and Condition API](/en/js-api.html): JS actions, JS conditions, event object structure, available APIs, and examples.
 
-## Legal
-
-These pages are provided through standalone links and are kept separate from the usage guides:
-
-- [Privacy Policy](/en/privacy.html): local data, sensitive permissions, network access, and user controls.
-- [Terms of Service](/en/terms.html): use conditions, user responsibilities, privileged features, and disclaimers.
-
 ## Core Model
 
 A rule has three parts:

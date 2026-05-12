@@ -1,12 +1,8 @@
 ---
 title: Privacy Policy
 description: FlexKey privacy details for local data, sensitive permissions, network access, and user controls.
+layout: legal
 lang: en
-nav_title: Privacy Policy
-nav_order: 90
-nav_group: legal
-next_title: Terms of Service
-next_url: /en/terms.html
 lang_switch_url: /privacy.html
 ---
 
@@ -14,7 +10,7 @@ lang_switch_url: /privacy.html
 
 Effective date: May 12, 2026
 
-This Privacy Policy applies to the FlexKey Android app and this documentation site. FlexKey is a local automation tool. Its core features depend on rules, conditions, actions, and scripts that you create or import.
+This Privacy Policy applies to the FlexKey Android app and this web page. FlexKey is a local automation tool. Its core features depend on rules, conditions, actions, and scripts that you create or import.
 
 ## What We Do Not Upload by Default
 
@@ -67,7 +63,7 @@ When you add a remote action library, make sure the source is trustworthy. The r
 
 ## Third-Party Services and External Links
 
-Documentation hosting, feedback pages, app markets, remote action libraries, and third-party apps opened through actions are controlled by their own providers. FlexKey cannot control how those third parties process data. Review their privacy policies after leaving the app or this documentation site.
+Feedback pages, app markets, remote action libraries, and third-party apps opened through actions are controlled by their own providers. FlexKey cannot control how those third parties process data. Review their privacy policies after leaving the app or this web page.
 
 ## Data Sharing
 

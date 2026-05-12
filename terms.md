@@ -1,12 +1,8 @@
 ---
 title: 服务条款
 description: 灵动键 FlexKey 的使用条件、用户责任、高权限功能和免责声明。
+layout: legal
 lang: zh
-nav_title: 服务条款
-nav_order: 91
-nav_group: legal
-prev_title: 隐私政策
-prev_url: /privacy.html
 lang_switch_url: /en/terms.html
 ---
 
@@ -14,13 +10,13 @@ lang_switch_url: /en/terms.html
 
 生效日期：2026 年 5 月 12 日
 
-使用灵动键 FlexKey Android 应用或本文档，即表示您同意本服务条款。如果您不同意，请停止使用本应用和文档。
+使用灵动键 FlexKey Android 应用或本网页，即表示您同意本服务条款。如果您不同意，请停止使用本应用和本网页。
 
 ## 服务内容
 
 灵动键提供 Android 本地自动化能力，包括规则触发、按键映射、悬浮球、通知和无障碍事件条件、内置动作、自定义动作、JavaScript 脚本动作以及 Shizuku 增强动作等功能。
 
-本文档用于说明应用功能、权限用途、动作格式和脚本 API。隐私政策通过独立页面提供：[隐私政策](/privacy.html)。
+隐私政策通过独立页面提供：[隐私政策](/privacy.html)。
 
 ## 用户责任
 
@@ -47,7 +43,7 @@ lang_switch_url: /en/terms.html
 
 Android 系统版本、厂商系统限制、目标应用更新和权限状态都会影响自动化结果。灵动键不保证所有动作在所有设备、系统版本或应用版本上始终可用。
 
-维护者可以根据功能、安全、政策或兼容性需要更新、调整或移除部分功能和文档内容。
+维护者可以根据功能、安全、政策或兼容性需要更新、调整或移除部分功能和相关内容。
 
 ## 免责声明
 

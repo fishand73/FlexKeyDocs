@@ -1,12 +1,8 @@
 ---
 title: 隐私政策
 description: 灵动键 FlexKey 的本地数据、敏感权限、网络访问和用户控制说明。
+layout: legal
 lang: zh
-nav_title: 隐私政策
-nav_order: 90
-nav_group: legal
-next_title: 服务条款
-next_url: /terms.html
 lang_switch_url: /en/privacy.html
 ---
 
@@ -14,7 +10,7 @@ lang_switch_url: /en/privacy.html
 
 生效日期：2026 年 5 月 12 日
 
-本隐私政策适用于灵动键 FlexKey Android 应用和本文档站点。灵动键是一款本地自动化工具，核心功能依赖用户主动创建的规则、条件、动作和脚本。
+本隐私政策适用于灵动键 FlexKey Android 应用和本网页。灵动键是一款本地自动化工具，核心功能依赖用户主动创建的规则、条件、动作和脚本。
 
 ## 我们默认不会上传的内容
 
@@ -67,7 +63,7 @@ lang_switch_url: /en/privacy.html
 
 ## 第三方服务和外部链接
 
-文档、反馈、应用市场、远程动作库和您通过动作打开的第三方应用由各自服务提供方控制。灵动键无法控制这些第三方如何处理数据。离开应用或本文档站点后，请查看对应服务的隐私政策。
+反馈、应用市场、远程动作库和您通过动作打开的第三方应用由各自服务提供方控制。灵动键无法控制这些第三方如何处理数据。离开应用或本网页后，请查看对应服务的隐私政策。
 
 ## 数据共享
 

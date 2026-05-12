@@ -1,12 +1,8 @@
 ---
 title: Terms of Service
 description: FlexKey terms for use conditions, user responsibilities, privileged features, and disclaimers.
+layout: legal
 lang: en
-nav_title: Terms of Service
-nav_order: 91
-nav_group: legal
-prev_title: Privacy Policy
-prev_url: /en/privacy.html
 lang_switch_url: /terms.html
 ---
 
@@ -14,13 +10,13 @@ lang_switch_url: /terms.html
 
 Effective date: May 12, 2026
 
-By using the FlexKey Android app or this documentation site, you agree to these Terms of Service. If you do not agree, stop using the app and documentation.
+By using the FlexKey Android app or this web page, you agree to these Terms of Service. If you do not agree, stop using the app and this web page.
 
 ## Service
 
 FlexKey provides local Android automation features, including rule triggers, key mapping, floating button gestures, notification and accessibility-event conditions, built-in actions, custom actions, JavaScript script actions, and Shizuku-enhanced actions.
 
-This documentation explains app features, permission uses, action formats, and script APIs. The Privacy Policy is provided as a separate page: [Privacy Policy](/en/privacy.html).
+The Privacy Policy is provided as a separate page: [Privacy Policy](/en/privacy.html).
 
 ## User Responsibilities
 
@@ -47,7 +43,7 @@ Use only trusted sources. You are responsible for the consequences of installing
 
 Android versions, vendor system restrictions, target app updates, and permission state can affect automation results. FlexKey does not guarantee that every action will work on every device, Android version, or app version at all times.
 
-The maintainers may update, adjust, or remove features and documentation for functionality, security, policy, or compatibility reasons.
+The maintainers may update, adjust, or remove features and related content for functionality, security, policy, or compatibility reasons.
 
 ## Disclaimer
 

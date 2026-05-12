@@ -8,8 +8,6 @@
   {% assign search_label = 'Search' %}
   {% assign search_placeholder = 'Search docs' %}
   {% assign nav_label = 'Documentation' %}
-  {% assign guide_nav_label = 'Guides' %}
-  {% assign legal_nav_label = 'Legal' %}
   {% assign toc_label = 'On This Page' %}
   {% assign open_sidebar = 'Open navigation' %}
   {% assign close_sidebar = 'Close navigation' %}
@@ -25,8 +23,6 @@
   {% assign search_label = '搜索' %}
   {% assign search_placeholder = '搜索文档' %}
   {% assign nav_label = '文档目录' %}
-  {% assign guide_nav_label = '使用说明' %}
-  {% assign legal_nav_label = '法律文档' %}
   {% assign toc_label = '本页目录' %}
   {% assign open_sidebar = '打开目录' %}
   {% assign close_sidebar = '关闭目录' %}
@@ -48,9 +44,6 @@
   </head>
   <body class="page-{{ page.name | replace: '.md', '' | replace: 'index', 'home' }}">
     {% assign docs_pages = site.pages | where_exp: "item", "item.nav_order" | sort: "nav_order" %}
-    {% assign current_pages = docs_pages | where: "lang", current_lang %}
-    {% assign guide_pages = current_pages | where_exp: "item", "item.nav_group != 'legal'" %}
-    {% assign legal_pages = current_pages | where: "nav_group", "legal" %}
     <div class="mobile-bar">
       <button class="icon-button" id="sidebar-toggle" aria-label="{{ open_sidebar }}" aria-expanded="false">
         <span></span>
@@ -83,23 +76,8 @@
         </label>
 
         <nav class="sidebar-nav" aria-label="{{ nav_label }}">
-          <span class="sidebar-section-title">{{ guide_nav_label }}</span>
-          {% for item in guide_pages %}
-            {% assign item_title = item.nav_title | default: item.title %}
-            <a class="sidebar-link{% if item.url == page.url %} is-active{% endif %}"
-               href="{{ item.url | relative_url }}"
-               data-title="{{ item_title | downcase | escape }}"
-               data-description="{{ item.description | downcase | escape }}">
-              <span>{{ item_title }}</span>
-              {% if item.description %}
-                <small>{{ item.description }}</small>
-              {% endif %}
-            </a>
-          {% endfor %}
-
-          {% if legal_pages.size > 0 %}
-            <span class="sidebar-section-title sidebar-section-title-legal">{{ legal_nav_label }}</span>
-            {% for item in legal_pages %}
+          {% for item in docs_pages %}
+            {% if item.lang == current_lang %}
               {% assign item_title = item.nav_title | default: item.title %}
               <a class="sidebar-link{% if item.url == page.url %} is-active{% endif %}"
                  href="{{ item.url | relative_url }}"
@@ -110,8 +88,8 @@
                   <small>{{ item.description }}</small>
                 {% endif %}
               </a>
-            {% endfor %}
-          {% endif %}
+            {% endif %}
+          {% endfor %}
         </nav>
       </aside>
 

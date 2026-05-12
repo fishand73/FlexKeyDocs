@@ -1,0 +1,55 @@
+{% assign current_lang = page.lang | default: 'zh' %}
+{% if current_lang == 'en' %}
+  {% assign html_lang = 'en' %}
+  {% assign page_label = 'Legal' %}
+  {% assign privacy_label = 'Privacy Policy' %}
+  {% assign terms_label = 'Terms of Service' %}
+  {% assign switch_label = '中文' %}
+  {% assign privacy_url = '/en/privacy.html' %}
+  {% assign terms_url = '/en/terms.html' %}
+{% else %}
+  {% assign html_lang = site.lang | default: 'zh-CN' %}
+  {% assign page_label = '法律文档' %}
+  {% assign privacy_label = '隐私政策' %}
+  {% assign terms_label = '服务条款' %}
+  {% assign switch_label = 'English' %}
+  {% assign privacy_url = '/privacy.html' %}
+  {% assign terms_url = '/terms.html' %}
+{% endif %}
+<!doctype html>
+<html lang="{{ html_lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}FlexKey</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="icon" href="{{ '/assets/img/flexkey-icon.png' | relative_url }}" type="image/png">
+    <link rel="apple-touch-icon" href="{{ '/assets/img/flexkey-icon.png' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/legal.css' | relative_url }}">
+  </head>
+  <body>
+    <header class="legal-header">
+      <div class="legal-brand" aria-label="FlexKey">
+        <img src="{{ '/assets/img/flexkey-icon.png' | relative_url }}" alt="" width="42" height="42">
+        <span>
+          <strong>FlexKey</strong>
+          <small>{{ page_label }}</small>
+        </span>
+      </div>
+      <nav class="legal-nav" aria-label="{{ page_label }}">
+        <a{% if page.url == privacy_url %} class="is-active"{% endif %} href="{{ privacy_url | relative_url }}">{{ privacy_label }}</a>
+        <a{% if page.url == terms_url %} class="is-active"{% endif %} href="{{ terms_url | relative_url }}">{{ terms_label }}</a>
+        {% if page.lang_switch_url %}
+          <a href="{{ page.lang_switch_url | relative_url }}">{{ switch_label }}</a>
+        {% endif %}
+      </nav>
+    </header>
+
+    <main class="legal-shell">
+      <article class="legal-content">
+        {{ content }}
+      </article>
+    </main>
+  </body>
+</html>
