@@ -176,6 +176,21 @@ a:hover {
   gap: 4px;
 }
 
+.sidebar-section-title {
+  display: block;
+  margin: 8px 12px 2px;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.sidebar-section-title-legal {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
 .sidebar-link {
   display: block;
   padding: 10px 12px;
